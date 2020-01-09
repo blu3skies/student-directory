@@ -12,11 +12,20 @@ students = [
   "Joffrey Baratheon",
   "Norman Bates"
 ]
-#print them
 
-puts "The Sudents of Villans Acadmey" # title
-puts "-----------------"
-students.each { |student|
-puts student }
+def print_header # title
+  puts "The Sudents of Villans Acadmey"
+  puts "-----------------"
+end
+def print(names)
+  names.each { |student|
+  puts student }
+end
+def print_footer(names)
+  puts "Overall, we have #{names.count} great students"
+end
+
+print_header
+print(students)
+print_footer(students)
 #printing the totat students
-puts "Overall, we have #{students.count} great students"
