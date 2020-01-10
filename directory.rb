@@ -40,7 +40,7 @@ end
 def print(students)
   counter = 1
   students.each { |student|
-    if student[:name].chars.first == "s"
+    if student[:name].length < 12
       puts "#{counter}. #{student[:name]} (#{student[:cohort]} cohort)"
       counter += 1
     end
