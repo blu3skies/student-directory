@@ -36,11 +36,17 @@ def print_header # title
   puts "The Sudents of Villans Acadmey"
   puts "-----------------"
 end
+
 def print(students)
+  counter = 1
   students.each { |student|
-  puts "#{student[:name]} (#{student[:cohort]} cohort)"
-}
+    if student[:name].chars.first == "s"
+      puts "#{counter}. #{student[:name]} (#{student[:cohort]} cohort)"
+      counter += 1
+    end
+  }
 end
+
 def print_footer(names)
   puts "Overall, we have #{names.count} great students"
 end
