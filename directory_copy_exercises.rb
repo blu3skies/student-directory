@@ -27,8 +27,6 @@ def input_students
       month = default_month
     end
 
-
-
     # add the student has into array
     students << {
       name: name,
